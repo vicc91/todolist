@@ -6,7 +6,7 @@
     --dark-color: #212121;
     --text-color: #757575;
     --border-color: rgb(230, 230, 230);
-    --body-color: #eff6f8;
+    --body-color: #F5F7F9;
 }
 *,
 *:after,
@@ -59,10 +59,11 @@ body {
     overflow: hidden;
     flex-basis: 270px;
     padding: 2rem 1.7rem;
+    margin-left: 0;
+    transition: margin .4s;
 }
 .MainMenu--close {
-    flex-basis: 0;
-    padding: 0;
+    margin-left: -270px;
 }
 .MainMenu-navigation ul {
     padding-left: 0;
@@ -160,6 +161,25 @@ body {
     cursor: pointer;
     margin-bottom: .7rem;
 }
+/* Responsive desing breakpoint 768px */
+@media screen and (max-width: 768px) {
+    .Layout-content {
+        position: relative;
+    }
+    .MainMenu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: all .4s;
+    }
+    .MainMenu--close {
+        transform: translateX(-270px);
+        padding: 2rem;
+    }
+}
+
+
 /* Override colors -- hamburger menu library */
 .hamburger-inner, 
 .hamburger-inner:after,

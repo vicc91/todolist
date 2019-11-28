@@ -1,0 +1,184 @@
+@import "../../node_modules/hamburgers/dist/hamburgers.min.css";
+:root {
+    --first-color: #2196F3;
+    --second-color: #BBDEFB;
+    --accent-color: #7C4DFF;
+    --dark-color: #212121;
+    --text-color: #757575;
+    --border-color: rgb(230, 230, 230);
+    --body-color: #eff6f8;
+}
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--body-color);
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-color);
+}
+.Header {
+    background-color: #FFFFFF;
+    color: var(--first-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.Header-content {
+    display: flex;
+    align-items: center;
+}
+.Header-content h1 {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 7px;
+}
+.Header-logo {
+    display: flex;
+    align-items: center;
+    margin-left: .7rem;
+    cursor: pointer;
+}
+.Layout-content {
+    display: flex;
+}
+.Layout {
+    display: grid;
+    grid-template-rows: 54px auto;
+    min-height: 100vh;
+}
+.Layout-children {
+    flex: 1;
+}
+.MainMenu {
+    background-color: #FFFFFF;
+    border-right: 1px solid var(--border-color);
+    overflow: hidden;
+    flex-basis: 270px;
+    padding: 2rem 1.7rem;
+}
+.MainMenu--close {
+    flex-basis: 0;
+    padding: 0;
+}
+.MainMenu-navigation ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+.MainMenu-link {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: .3rem 0;
+}
+.MainMenu-link i {
+    padding: 0 .7rem 0 0;
+}
+.MainMenu-categories h2 {
+    color: var(--dark-color);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.4rem;
+}
+.CreateCategory-input,
+.CreateCategory-button,
+.CreateTask-input,
+.CreateTask-button {
+    display: block;
+    height: 35px;
+    border-radius: .3rem;
+}
+.CreateCategory-input {
+    width: 100%;
+}
+.CreateTask-input {
+    width: 350px;
+}
+.CreateTask-input,
+.CreateCategory-input  {
+    border: 1px solid var(--border-color);
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+    padding-left: .5rem;
+    margin-bottom: .7rem;
+    background-color: #FFFFFF;
+}
+.CreateCategory-button,
+.CreateTask-button {
+   border: none;
+   text-transform: uppercase;
+   background-color: var(--accent-color);
+   color: #FFFFFF;
+   font-family: 'Noto Sans', sans-serif;
+   padding: 0 1rem;
+   font-size: 1rem;
+}
+.CategoriesList-items {
+    padding-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    list-style-type: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.CategoriesList-items li {
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.CategoriesList-item-span {
+    float: right;
+}
+.CreateCategory-message {
+    margin: 0 0 .7rem;
+    font-size: .85rem;
+    color: var(--accent-color);
+}
+.Tasks-container {
+    padding: 2rem 4rem;
+}
+.Tasks-title {
+    color: var(--dark-color);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.TasksList-icon {
+    color: var(--first-color);
+}
+.Tasks-items {
+    padding-left: 0;
+    margin-top: 2rem;
+    list-style-type: none;
+}
+.Tasks-items li {
+    cursor: pointer;
+    margin-bottom: .7rem;
+}
+/* Override colors -- hamburger menu library */
+.hamburger-inner, 
+.hamburger-inner:after,
+.hamburger-inner:before {
+    background-color: var(--dark-color);
+    width: 40px;
+}
+.hamburger.is-active .hamburger-inner:before {
+    background-color: var(--dark-color);
+}
+.hamburger.is-active .hamburger-inner:after{
+    background-color: var(--dark-color);
+}
+.hamburger-box,
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    width: 30px;
+}
+.hamburger-box {
+    height: 20px;
+}

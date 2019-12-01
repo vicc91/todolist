@@ -178,7 +178,67 @@ body {
         padding: 2rem;
     }
 }
-
+.Login-container {
+    padding: 2rem;
+}
+.LoginComponent-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.LoginComponent-title {
+    font-size: 1.3rem;
+}
+.LoginComponent-button,
+.Profile-button {
+    border: none;
+    background-color: #29487d;
+    color: #FFFFFF;
+    padding: .5rem 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+.LoginComponent-button i {
+    margin-right: .7rem;
+}
+.Tasks-not-login {
+    text-align: center;
+}
+.Profile-container {
+    padding: 2rem;
+}
+.Profile-info {
+    display: inline-flex;
+    border: 1px solid var(--border-color);
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: .4rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+.Profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Profile-content h2 {
+    margin-top: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--dark-color);
+    font-size: 1.4rem;
+}
+.Profile-image {
+    border-radius: 50%;
+    margin-right: .7rem;
+}
+.Profile-info h4 {
+    margin: 0;
+}
+.Profile-button {
+    display: block;
+}
 
 /* Override colors -- hamburger menu library */
 .hamburger-inner, 

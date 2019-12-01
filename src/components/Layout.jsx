@@ -6,7 +6,7 @@ const Layout = ({
     children,
     categories,
     addCategory,
-    selectCategory,
+    selectCategory
 }) => {
     const [activeMenu, setActiveMenu] = useState(window.innerWidth <= 768 ? false : true);
 
@@ -35,7 +35,7 @@ const Layout = ({
                     selectCategory={selectCategory}
                 />
                 <div className="Layout-children">
-                    {children} 
+                    {children}
                 </div>    
             </div>
         </div>

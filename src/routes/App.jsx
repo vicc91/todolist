@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 // Components
 import Layout from '../components/Layout';
@@ -10,6 +10,7 @@ import Login from '../pages/Login';
 
 // Styles
 import '../styles/global.css';
+import Profile from '../pages/Profile';
 
 const App = () => {
     const [state, setState] = useState({
@@ -75,6 +76,9 @@ const App = () => {
                 selectCategory={selectCategory}
             >
                 <Switch>
+                    <Route exact path="/">
+                        <Redirect to="/login" />
+                    </Route>
                     <Route exact path="/tasks">
                         <Tasks 
                             category={state.selectedCategoryIndex === null ? {}
@@ -84,6 +88,7 @@ const App = () => {
                         />
                     </Route>
                     <Route exact path="/login" component={Login} />
+                    <Route exact path="/profile" component={Profile} />
                 </Switch>
             </Layout>
         </BrowserRouter>

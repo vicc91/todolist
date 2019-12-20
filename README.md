@@ -1,2 +1,2 @@
 # todolist
-lista de tareas, construida con ReactJS
+todolist app build with ReactJS, firebase authenticate with facebook login

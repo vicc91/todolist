@@ -23,12 +23,17 @@ body {
 }
 .Header {
     background-color: #FFFFFF;
-    color: var(--first-color);
     border-bottom: 1px solid var(--border-color);
+    position: relative;
 }
 .Header-content {
     display: flex;
+    height: 100%;
     align-items: center;
+    justify-content: space-between;
+}
+.Header-info {
+    display: flex;
 }
 .Header-content h1 {
     margin: 0;
@@ -36,11 +41,13 @@ body {
     font-size: 1.5rem;
     margin-left: 7px;
 }
-.Header-logo {
+.Header-link {
     display: flex;
     align-items: center;
-    margin-left: .7rem;
+    margin-left: 1.2rem;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--first-color);
 }
 .Layout-content {
     display: flex;
@@ -53,37 +60,22 @@ body {
 .Layout-children {
     flex: 1;
 }
-.MainMenu {
-    background-color: #FFFFFF;
-    border-right: 1px solid var(--border-color);
-    overflow: hidden;
-    flex-basis: 270px;
-    padding: 2rem 1.7rem;
-    margin-left: 0;
-    transition: margin .4s;
-}
-.MainMenu--close {
-    margin-left: -270px;
-}
 .MainMenu-navigation ul {
+    display: flex;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
     list-style-type: none;
+    padding-right: .7rem;
 }
 .MainMenu-link {
     text-decoration: none;
     color: var(--text-color);
     display: block;
-    padding: .3rem 0;
+    padding: .5rem
 }
 .MainMenu-link i {
     padding: 0 .7rem 0 0;
-}
-.MainMenu-categories h2 {
-    color: var(--dark-color);
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1.4rem;
 }
 .CreateCategory-input,
 .CreateCategory-button,
@@ -141,7 +133,7 @@ body {
     color: var(--accent-color);
 }
 .Tasks-container {
-    padding: 2rem 4rem;
+    display: flex;
 }
 .Tasks-title {
     color: var(--dark-color);
@@ -161,23 +153,17 @@ body {
     cursor: pointer;
     margin-bottom: .7rem;
 }
-/* Responsive desing breakpoint 768px */
-@media screen and (max-width: 768px) {
-    .Layout-content {
-        position: relative;
-    }
-    .MainMenu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        transition: all .4s;
-    }
-    .MainMenu--close {
-        transform: translateX(-270px);
-        padding: 2rem;
-    }
+.tasks-categories h2 {
+    color: var(--dark-color);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.4rem;
 }
+.tasks-categories {
+    flex-basis: 250px;
+    padding: 2rem;
+}
+.Task-not-content,
+.Tasks-data,
 .Login-container {
     padding: 2rem;
 }
@@ -205,6 +191,8 @@ body {
 }
 .Tasks-not-login {
     text-align: center;
+    padding: 2rem;
+    flex: 1;
 }
 .Profile-container {
     padding: 2rem;
@@ -217,6 +205,10 @@ body {
     border-radius: .4rem;
     align-items: center;
     margin-bottom: 1.4rem;
+}
+.Profile-info span,
+.Profile-info h4 {
+    font-weight: 400;
 }
 .Profile-content {
     display: flex;
@@ -240,6 +232,41 @@ body {
     display: block;
 }
 
+/* Responsive design breakpoint 768px */
+@media screen and (max-width: 768px) {
+    .MainMenu {
+        position: absolute;
+        top: 101%;
+        left: -150%;
+        width: 100%;
+        text-align: center;
+        transition: all .4s;
+    }
+    .MainMenu-navigation ul {
+        display: block;
+        padding-right: 0;
+    }
+    .MainMenu-link {
+        padding-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        background-color: #FFFFFF;
+    }
+    .MainMenu-open {
+        left: 0;
+    }
+    .Tasks-container {
+        flex-direction: column;
+    }
+    .Tasks-data,
+    .Task-not-content {
+        padding-top: 0;
+    }
+    .CategoriesList {
+        max-height: 140px;
+        overflow-y: auto;
+    }
+}
+
 /* Override colors -- hamburger menu library */
 .hamburger-inner, 
 .hamburger-inner:after,
@@ -261,4 +288,9 @@ body {
 }
 .hamburger-box {
     height: 20px;
+}
+
+/* Helpers */
+.display-none {
+    display: none;
 }

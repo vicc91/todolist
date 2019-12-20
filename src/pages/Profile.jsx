@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 // Utils
 import { auth } from '../utils/firebase';
 

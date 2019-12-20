@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+// Components
 import LoginComponent from '../components/LoginComponent';
 
-// Utils
-import { auth } from '../utils/firebase';
-
-const Login = ({ history }) => {
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
-        auth().onAuthStateChanged(user => {
-            setUser(user);
-        });
-
-        if (user) {
-            history.push('/tasks')
-        }
-    }, [user]);
-
+const Login = () => {
     return (
         <div className="Login">
             <div className="Login-container">
